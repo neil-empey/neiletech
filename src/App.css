@@ -193,3 +193,46 @@ body {
   color: Black;
   margin-right: 5px;
 }
+
+.projects-button {
+    border: none;
+    background-color: inherit;
+    padding-top: 50px;
+    padding-right: 30px;
+    padding-left: 50px;
+    margin-top: 150px;
+    font-size: 47px;
+    font-family: Permanent Marker;
+    background: linear-gradient(to right, #cc0066 10%, #ff9966 90%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+
+}
+
+.projects-button:hover {
+  background-color: #4CAF50; /* Green */
+  color: red;
+}
+
+.contacts-button {
+    border: none;
+    padding-top: 50px;
+    padding-right: 30px;
+    padding-left: 50px;
+    margin-top: 150px;
+    font-size: 47px;
+    font-family: Permanent Marker;
+    background: linear-gradient(to right, #ffcc66 10%, #cc0066 90%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+
+
+
+}
+
+.contacts-button:hover {
+  background-color: red; /* Green */
+  color: #4CAF50;
+}

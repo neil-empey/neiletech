@@ -1,3 +1,6 @@
+import Pbutton from "./Pbutton";
+import Cbutton from "./Cbutton";
+
 export default function Main() {
   return (
     <div class="site-wrapper">
@@ -18,7 +21,11 @@ export default function Main() {
           <br></br>
 
           <div class="mastfoot">
+            <div></div>
             <div class="inner">
+              <Cbutton />
+
+              <Pbutton />
               <p class="second-lead">© 2021 neileTech</p>
             </div>
           </div>
