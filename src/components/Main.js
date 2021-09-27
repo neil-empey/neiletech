@@ -23,9 +23,6 @@ export default function Main() {
           <div class="mastfoot">
             <div></div>
             <div class="inner">
-              <Cbutton />
-
-              <Pbutton />
               <p class="second-lead">© 2021 neileTech</p>
             </div>
           </div>
