@@ -190,11 +190,13 @@ body {
 }
 
 .second-lead {
+  position: float;
   color: Black;
   margin-right: 5px;
 }
 
 .projects-button {
+    position: float;
     border: none;
     background-color: inherit;
     padding-top: 50px;
@@ -216,6 +218,7 @@ body {
 }
 
 .contacts-button {
+    position: float;
     border: none;
     padding-top: 50px;
     padding-right: 30px;

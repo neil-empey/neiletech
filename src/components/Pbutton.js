@@ -1,14 +1,13 @@
 import React from "react";
+import { BrowserRouter as Router, NavLink } from "react-router-dom";
 
 function Pbutton() {
-  function sayHello() {
-    alert("Hello!");
-  }
-
   return (
-    <button class="projects-button" onClick={sayHello}>
-      Projects
-    </button>
+    <Router>
+      <NavLink class="projects-button" to="/projects">
+        Projects
+      </NavLink>
+    </Router>
   );
 }
 

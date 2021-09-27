@@ -1,12 +1,6 @@
 import React from "react";
 import Contact from "./Contact";
-import {
-  BrowserRouter as Router,
-  Route,
-  Switch,
-  Redirect,
-  NavLink
-} from "react-router-dom";
+import { BrowserRouter as Router, NavLink, Route } from "react-router-dom";
 
 function Cbutton() {
   return (
@@ -14,6 +8,8 @@ function Cbutton() {
       <NavLink class="contacts-button" to="/contact">
         Contact
       </NavLink>
+
+      <Route path="/contact" component={Contact} />
     </Router>
   );
 }
