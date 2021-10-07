@@ -7,12 +7,9 @@ import "./App.css";
 function App() {
   return (
     <div>
-      <Video />
-      <br />
-      <Main />
-      <Cbutton />
-
-      <Pbutton />
+      <div class="footer">
+        <Pbutton />
+      </div>
     </div>
   );
 }

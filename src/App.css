@@ -22,8 +22,7 @@ a:hover {
 
 html,
 body {
-/*css for full size background image
-  background: url(https://res.cloudinary.com/argus2/video/upload/v1631954474/Don_t_wait._The_time_will_never_be_just_right._yngvhw.mp4) no-repeat center center fixed;
+  background: url(https://res.cloudinary.com/argus2/image/upload/v1633452870/Salmon_Events_Planner_Portfolio_Website_1_me4zjl.png) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -34,18 +33,29 @@ body {
   color: #fff;
   text-align: center;
   text-shadow: 0 1px 3px rgba(0,0,0,.5);
-*/
+
 
 
 }
 
-#myVideo {
+.footer {
+  position: fixed;
+ left: 0;
+ bottom: 0;
+ width: 100%;
+}
+
+.myVideo {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   object-fit: cover;
-   width: 100%;
-   height: 100%;
-   position: fixed;
-   top: 0;
-   left: 0;
+  position: fixed;
+ right: 0;
+ bottom: 0;
+ min-width: 100%;
+ min-height: 100%;
 }
 
 /* Extra markup and styles for table-esque vertical and horizontal centering */
@@ -196,13 +206,8 @@ body {
 }
 
 .projects-button {
-    position: float;
     border: none;
     background-color: inherit;
-    padding-top: 50px;
-    padding-right: 30px;
-    padding-left: 50px;
-    margin-top: 150px;
     font-size: 47px;
     font-family: Permanent Marker;
     background: linear-gradient(to right, #cc0066 10%, #ff9966 90%);
