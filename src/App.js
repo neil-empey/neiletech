@@ -9,6 +9,7 @@ function App() {
     <div>
       <div class="footer">
         <Pbutton />
+        <Cbutton />
       </div>
     </div>
   );

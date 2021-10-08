@@ -40,7 +40,7 @@ body {
 
 .footer {
   position: fixed;
- left: 0;
+ left: 300px;
  bottom: 0;
  width: 100%;
 }
