@@ -8,8 +8,6 @@ function Cbutton() {
       <NavLink class="contacts-button" to="/contact">
         Contact
       </NavLink>
-
-      <Route path="/contact" component={Contact} />
     </Router>
   );
 }
