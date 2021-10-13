@@ -13,6 +13,7 @@ function App() {
       <div class="footer">
         <Pbutton />
         <Cbutton />
+        <p>hello</p>
       </div>
     </div>
   );
