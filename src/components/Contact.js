@@ -20,7 +20,7 @@ export default function Contact() {
           <div class="mastfoot">
             <div></div>
             <div class="inner">
-              <p class="second-lead">© 2021 neileTech</p>
+              <p class="second-lead">© 2021 NeileTech</p>
             </div>
           </div>
         </div>
