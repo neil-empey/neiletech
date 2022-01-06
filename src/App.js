@@ -10,18 +10,41 @@ function App() {
           <div className="column-66">
             <h1 className="ne-title">Neil Empey</h1>
           </div>
+
           <div className="column-33">
-            <p></p>
+            <h2 className="stack">Full Stack Software Engineer</h2>
+            <div className="hide">
+              <h3 className="skill1">React</h3>
+              <h4 className="skill2">Redux</h4>
+              <h3 className="skill1">Ruby on Rails</h3>
+              <h4 className="skill2">Relational Databases</h4>
+              <p className="skill1">
+                <small>
+                  CSS, HTML, JSON, REST API, GIT, PostgreSQL, MySQL, RSpec
+                </small>
+              </p>
+            </div>
+            <div class="triangle-up"></div>
           </div>
+          <div class="triangle-down"></div>
         </div>
       </div>
       <div className="container">
         <div className="row">
-          <div className="column-66"></div>
-          <div className="column-33"></div>
-          <button className="button" onClick={<ContactUs />}>
-            <span>Contact Me</span>
-          </button>
+          <div className="column-66">
+            <button className="button">
+              <span>Selected Projects</span>
+            </button>
+          </div>
+          <div class="triangle-up"></div>
+
+          <div className="column-33">
+            <div class="triangle-down">
+              <button className="button" onClick={<ContactUs />}>
+                <span>Contact Me</span>
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </div>

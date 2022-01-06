@@ -51,6 +51,15 @@ body{
   padding: 20px;
 }
 
+.stack {
+  font-family: 'Roboto Mono', monospace;
+}
+
+.stack:hover + .hide {
+  display: block;
+  color: #228381
+}
+
 /* Add responsiveness - make the columns appear on top of each other instead of next to each other on small screens */
 @media screen and (max-width: 1000px) {
   .column-66,
@@ -61,13 +70,14 @@ body{
 }
 
 .button {
+  font-family: 'Roboto Mono', monospace;
   display: inline-block;
-  border-radius: 4px;
-  background-color: #f4511e;
+  border-radius: 50%;
+  background-color: #c926e1;
   border: none;
-  color: #FFFFFF;
+  color: #0029ff;
   text-align: center;
-  font-size: 28px;
+  font-size: 31px;
   padding: 20px;
   width: 200px;
   transition: all 0.5s;
@@ -98,4 +108,34 @@ body{
 .button:hover span:after {
   opacity: 1;
   right: 0;
+}
+
+.hide{
+  display: none;
+}
+
+.triangle-down {
+	width: 0;
+	height: 0;
+	border-left: 25px solid transparent;
+	border-right: 25px solid transparent;
+	border-top: 50px solid black;
+}
+
+.triangle-up {
+	width: 0;
+	height: 0;
+	border-left: 45px solid transparent;
+	border-right: 45px solid transparent;
+	border-bottom: 50px solid black;
+}
+
+.skill1{
+  font-family: 'ABeeZee', sans-serif;
+  color: #1be9cd;
+}
+
+.skill2{
+  font-family: 'ABeeZee', sans-serif;
+  color: #1be9f2;
 }
