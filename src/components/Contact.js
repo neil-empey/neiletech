@@ -1,30 +1,38 @@
-export default function Contact() {
+import React, { useRef } from "react";
+import emailjs from "@emailjs/browser";
+
+export const ContactUs = () => {
+  const form = useRef();
+
+  const sendEmail = e => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        process.env.service_id,
+        process.env.template_id,
+        form.current,
+        process.env.user_id
+      )
+      .then(
+        result => {
+          console.log(result.text);
+        },
+        error => {
+          console.log("Sorry, try again");
+        }
+      );
+  };
+
   return (
-    <div class="site-wrapper">
-      <div class="site-wrapper-inner">
-        <div class="cover-container">
-          <div class="masthead clearfix">
-            <div class="inner">
-              <h1 class="masthead-brand"></h1>
-
-              <br></br>
-            </div>
-          </div>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-
-          <br></br>
-
-          <div class="mastfoot">
-            <div></div>
-            <div class="inner">
-              <p class="second-lead">© 2021 NeileTech</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <form ref={form} onSubmit={sendEmail}>
+      <label>Name</label>
+      <input type="text" name="user_name" />
+      <label>Email</label>
+      <input type="email" name="user_email" />
+      <label>Message</label>
+      <textarea name="message" />
+      <input type="submit" value="Send" />
+    </form>
   );
-}
+};

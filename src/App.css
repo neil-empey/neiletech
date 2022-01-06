@@ -1,246 +1,101 @@
-
-a,
-a:focus,
-a:hover {
-  color: #fff;
+body{
+  background-color: rgb(91, 106, 194)
+}
+.main-background{
+  background-color: rgb(91, 106, 194)
 }
 
-/* Custom default button */
-.btn-default,
-.btn-default:hover,
-.btn-default:focus {
-  color: #333;
-  text-shadow: none; /* Prevent inheritence from `body` */
-  background-color: #fff;
-  border: 1px solid #fff;
+.ne-title{
+  font-size: 8vw;
+  font-family: 'Prata', serif;
 }
 
-
-/*
- * Base structure
- */
-
-html,
-body {
-  background: url(https://res.cloudinary.com/argus2/image/upload/v1633452870/Salmon_Events_Planner_Portfolio_Website_1_me4zjl.png) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-
-  height: 100%;
-  background-color: #060;
-  color: #fff;
-  text-align: center;
-  text-shadow: 0 1px 3px rgba(0,0,0,.5);
-
-
-
-}
-
-.footer {
-  position: fixed;
- left: 350px;
- bottom: 0;
- width: 100%;
-}
-
-.myVideo {
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  object-fit: cover;
-  position: fixed;
- right: 0;
- bottom: 0;
- min-width: 100%;
- min-height: 100%;
-}
-
-/* Extra markup and styles for table-esque vertical and horizontal centering */
-.site-wrapper {
-  display: table;
-  width: 100%;
-  height: 100%; /* For at least Firefox */
-  min-height: 100%;
-  -webkit-box-shadow: inset 0 0 100px rgba(0,0,0,.5);
-          box-shadow: inset 0 0 100px rgba(0,0,0,.5);
-}
-.site-wrapper-inner {
-  display: table-cell;
-  vertical-align: top;
-}
-.cover-container {
-  margin-right: auto;
-  margin-left: auto;
-}
-
-/* Padding for spacing */
-.inner {
-  padding: 30px;
-  text-align: center;
-  vertical-align: top;
-}
-
-
-/*
- * Header
- */
-.masthead-brand {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  font-family: Bungee;
-  font-size: 37px;
-  font-weight: bold;
-}
-
-.masthead-nav > li {
+.arrow {
+  border: solid black;
+  border-width: 0 2px 2px 0;
   display: inline-block;
-}
-.masthead-nav > li + li {
-  margin-left: 20px;
-}
-.masthead-nav > li > a {
-  padding-right: 0;
-  padding-left: 0;
-  font-size: 21px;
-  color: #fff; /* IE8 proofing */
-  color: rgba(255,255,255,.95);
-  border-bottom: 2px solid transparent;
-}
-.masthead-nav > li > a:hover,
-.masthead-nav > li > a:focus {
-  background-color: transparent;
-  border-bottom-color: #a9a9a9;
-  border-bottom-color: rgba(255,255,255,.25);
-}
-.masthead-nav > .active > a,
-.masthead-nav > .active > a:hover,
-.masthead-nav > .active > a:focus {
-  color: #fff;
-  border-bottom-color: #fff;
+  padding: 3px;
 }
 
-@media (min-width: 768px) {
-  .masthead-brand {
+.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  padding: 64px;
+}
+
+/* Clear floats */
+.row:after {
+  content: "";
+  display: table;
+  clear: both
+}
+
+/* 2/3 column */
+.column-66 {
+  float: left;
+  width: 66.66666%;
+  padding: 20px;
+}
+
+/* 1/3 column */
+.column-33 {
+  float: left;
+  width: 33.33333%;
+  padding: 20px;
+}
+
+/* Add responsiveness - make the columns appear on top of each other instead of next to each other on small screens */
+@media screen and (max-width: 1000px) {
+  .column-66,
+  .column-33 {
+    width: 100%;
     text-align: center;
   }
-  .masthead-nav {
-    float: right;
-  }
 }
 
-
-/*
- * Cover
- */
-
-.cover {
-  padding: 0 20px;
-}
-.cover .btn-lg {
-  padding: 10px 20px;
-  font-weight: bold;
-}
-
-
-/*
- * Footer
- */
-
-.mastfoot {
-  color: #999; /* IE8 proofing */
-  color: rgba(255,255,255,.5);
+.button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
 }
 
-
-/*
- * Affix and center
- */
-
-@media (min-width: 768px) {
-  /* Pull out the header and footer */
-  .masthead {
-    position: fixed;
-    top: 0;
-  }
-  .mastfoot {
-    position: fixed;
-    bottom: 0;
-  }
-  /* Start the vertical centering */
-  .site-wrapper-inner {
-    vertical-align: middle;
-  }
-  /* Handle the widths */
-  .masthead,
-  .mastfoot,
-  .cover-container {
-    width: 100%; /* Must be percentage or pixels for horizontal alignment */
-  }
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
 }
 
-@media (min-width: 992px) {
-  .masthead,
-  .mastfoot,
-  .cover-container {
-    width: 700px;
-  }
-}
-.third {
-  font-family: Bungee;
-  font-size: 45px;
-  color: Black;
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
 }
 
-.lead {
-  font-family: Bungee;
-  font-size: 41px;
+.button:hover span {
+  padding-right: 25px;
 }
 
-.second-lead {
-  position: float;
-  color: Black;
-  margin-right: 5px;
-}
-
-.projects-button {
-    border: none;
-    background-color: inherit;
-    font-size: 47px;
-    font-family: Permanent Marker;
-    background: linear-gradient(to right, #FFFF00 10%, #00FF99 90%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-
-
-}
-
-.projects-button:hover {
-  background-color: #4CAF50; /* Green */
-  color: red;
-}
-
-.contacts-button {
-    position: float;
-    border: none;
-    padding-top: 50px;
-    padding-right: 30px;
-    padding-left: 50px;
-    margin-top: 150px;
-    font-size: 47px;
-    font-family: Permanent Marker;
-    background: linear-gradient(to right, #00FF99 10%, #FFFF00 90%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-
-
-
-
-}
-
-.contacts-button:hover {
-  background-color: red; /* Green */
-  color: #4CAF50;
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
 }

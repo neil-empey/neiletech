@@ -1,32 +1,28 @@
-import Main from "./components/Main";
-import Video from "./components/Video";
-import Pbutton from "./components/Pbutton";
-import Cbutton from "./components/Cbutton";
 import "./App.css";
-import Projects from "./components/Projects";
-import Contact from "./components/Contact";
 import { BrowserRouter as Router, NavLink, Route } from "react-router-dom";
+import { ContactUs } from "./components/Contact";
 
 function App() {
   return (
     <div>
-      <div class="footer">
-        <Pbutton />
-        <Cbutton />
-        <p>hello</p>
-        <p>Neil</p>
-        <p>empey</p>
-        <p>jump</p>
-        <p>neil</p>
-        <p>another</p>
-        <p>test1</p>
-        <p>test2</p>
-        <p>test3</p>
-        <p>test4</p>
-        <p>test5</p>
-        <p>test6</p>
-        <p>test7</p>
-        <p>test8</p>
+      <div className="container">
+        <div className="row">
+          <div className="column-66">
+            <h1 className="ne-title">Neil Empey</h1>
+          </div>
+          <div className="column-33">
+            <p></p>
+          </div>
+        </div>
+      </div>
+      <div className="container">
+        <div className="row">
+          <div className="column-66"></div>
+          <div className="column-33"></div>
+          <button className="button" onClick={<ContactUs />}>
+            <span>Contact Me</span>
+          </button>
+        </div>
       </div>
     </div>
   );
