@@ -8,6 +8,7 @@ function App() {
       <div className="container">
         <div className="row">
           <div className="column-66">
+            <p className="triangle-down"></p>
             <h1 className="ne-title">Neil Empey</h1>
           </div>
 
@@ -24,9 +25,8 @@ function App() {
                 </small>
               </p>
             </div>
-            <div class="triangle-up"></div>
+            <div className="triangle-up"></div>
           </div>
-          <div class="triangle-down"></div>
         </div>
       </div>
       <div className="container">
@@ -36,14 +36,13 @@ function App() {
               <span>Selected Projects</span>
             </button>
           </div>
-          <div class="triangle-up"></div>
+          <div className="triangle-up"></div>
 
           <div className="column-33">
-            <div class="triangle-down">
-              <button className="button" onClick={<ContactUs />}>
-                <span>Contact Me</span>
-              </button>
-            </div>
+            <div className="triangle-down"></div>
+            <button className="button" onClick={<ContactUs />}>
+              <span>Contact Me</span>
+            </button>
           </div>
         </div>
       </div>
