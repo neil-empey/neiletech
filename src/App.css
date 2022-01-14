@@ -169,6 +169,14 @@ input[type=submit] {
  float: right;
 }
 
+.trip {
+  font-family: 'Sonsie One', cursive;
+  font-size: 41px;
+  color: #0000ff;
+  border-radius: 21px;
+  padding: 20px;
+}
+
 /* Style the container */
 .container {
  border-radius: 5px;

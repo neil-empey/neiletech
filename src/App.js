@@ -7,6 +7,7 @@ import emailjs from "@emailjs/browser";
 
 function App() {
   const [showForm, setShowForm] = useState(false);
+  const [showProjects, setShowProjects] = useState(false);
   const form = useRef();
 
   function contactUs(e) {
@@ -48,7 +49,8 @@ function App() {
               <h4 className="skill2">Relational Databases</h4>
               <p className="skill1">
                 <small>
-                  CSS, HTML, JSON, REST API, GIT, PostgreSQL, MySQL, RSpec
+                  CSS, HTML, JSON, REST API, GIT, PostgreSQL, Javascript, Node,
+                  RSpec
                 </small>
               </p>
             </div>
@@ -59,9 +61,32 @@ function App() {
       <div className="container">
         <div className="row">
           <div className="column-66">
-            <button className="button">
-              <span>Selected Projects</span>
-            </button>
+            {showProjects === true ? (
+              <button
+                className="trip"
+                type="button"
+                onClick={() => {
+                  setShowProjects(false);
+                  window.open(
+                    "https://neils-tripcast.herokuapp.com/",
+                    "_blank"
+                  );
+                }}
+              >
+                TripCast
+              </button>
+            ) : (
+              <form>
+                <button
+                  className="button"
+                  onClick={() => {
+                    setShowProjects(true);
+                  }}
+                >
+                  <span>Selected Projects</span>
+                </button>
+              </form>
+            )}
           </div>
           <div className="triangle-up"></div>
 
