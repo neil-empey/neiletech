@@ -1,38 +1,26 @@
 import React, { useRef } from "react";
-import emailjs from "@emailjs/browser";
+import axios from "axios";
+function ContactUs(e) {
+  e.preventDefault();
 
-export const ContactUs = () => {
-  const form = useRef();
-
-  const sendEmail = e => {
-    e.preventDefault();
-
-    emailjs
-      .sendForm(
-        process.env.service_id,
-        process.env.template_id,
-        form.current,
-        process.env.user_id
-      )
-      .then(
-        result => {
-          console.log(result.text);
-        },
-        error => {
-          console.log("Sorry, try again");
-        }
-      );
+  var data = {
+    service_id: "YOUR_SERVICE_ID",
+    template_id: "YOUR_TEMPLATE_ID",
+    user_id: "YOUR_USER_ID",
+    template_params: {
+      name: e.target.name,
+      email: e.target.email,
+      message: e.target.message
+    }
   };
 
-  return (
-    <form ref={form} onSubmit={sendEmail}>
-      <label>Name</label>
-      <input type="text" name="user_name" />
-      <label>Email</label>
-      <input type="email" name="user_email" />
-      <label>Message</label>
-      <textarea name="message" />
-      <input type="submit" value="Send" />
-    </form>
-  );
-};
+  axios
+    .post("https://api.emailjs.com/api/v1.0/email/send-form", {
+      type: "POST",
+      data: JSON.stringify(data),
+      contentType: "application/json"
+    })
+    .then(response => {
+      return console.log("message sent");
+    });
+}

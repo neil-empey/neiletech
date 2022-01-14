@@ -1,8 +1,35 @@
 import "./App.css";
 import { BrowserRouter as Router, NavLink, Route } from "react-router-dom";
 import { ContactUs } from "./components/Contact";
+import axios from "axios";
+import React, { useState, useRef } from "react";
+import emailjs from "@emailjs/browser";
 
 function App() {
+  const [showForm, setShowForm] = useState(false);
+  const form = useRef();
+
+  function contactUs(e) {
+    setShowForm(false);
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        process.env.REACT_APP_SERVICE_ID,
+        process.env.REACT_APP_TEMPLATE_ID,
+        form.current,
+        process.env.REACT_APP_USER_ID
+      )
+      .then(
+        result => {
+          alert("your message was sent");
+        },
+        error => {
+          alert("It appears an error occurred, please try again");
+        }
+      );
+  }
+
   return (
     <div>
       <div className="container">
@@ -40,9 +67,58 @@ function App() {
 
           <div className="column-33">
             <div className="triangle-down"></div>
-            <button className="button" onClick={<ContactUs />}>
-              <span>Contact Me</span>
-            </button>
+            {showForm === true ? (
+              <div className="container">
+                <form ref={form} onSubmit={contactUs}>
+                  <div className="row">
+                    <div className="col-25"></div>
+                    <div className="col-75">
+                      <input
+                        type="text"
+                        id="fname"
+                        name="firstname"
+                        placeholder="Name"
+                      ></input>
+                    </div>
+                  </div>
+                  <div className="row">
+                    <div className="col-25"></div>
+                    <div className="col-75">
+                      <input
+                        type="text"
+                        id="email"
+                        name="email"
+                        placeholder="Email"
+                      ></input>
+                    </div>
+                  </div>
+                  <div className="row">
+                    <div className="col-25"></div>
+                    <div className="col-75">
+                      <textarea
+                        id="message"
+                        name="message"
+                        placeholder="Your message.."
+                      ></textarea>
+                    </div>
+                  </div>
+                  <div className="row">
+                    <input type="submit" value="SEND"></input>
+                  </div>
+                </form>
+              </div>
+            ) : (
+              <form>
+                <button
+                  className="button"
+                  onClick={() => {
+                    setShowForm(true);
+                  }}
+                >
+                  <span>Contact Me</span>
+                </button>
+              </form>
+            )}
           </div>
         </div>
       </div>
